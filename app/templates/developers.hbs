@@ -17,7 +17,7 @@
     {{#each model.datas as |dev| }}
       <tr>
         <td style="color:grey">{{ dev.Identity }}</td>
-        <td style="width: 15px;"><button class="ui button black" {{ action 'edit' dev }}> EDIT </button></td>
+        <td style="width: 15px;"> {{# link-to "developers.edit" dev}} EDIT {{/link-to}}</td>
         <td style="width: 15px;"><button class="ui button red" {{ action 'delete' dev }}> DELETE </button></td>
       </tr>
     {{/each}}
