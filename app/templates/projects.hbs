@@ -1,0 +1,37 @@
+<h2 class="ui header" style="margin-top: 10px; margin-bottom: 10px">
+  models\Projects
+</h2>
+<div class="ui" style="margin-top: 10px; margin-bottom: 10px">
+  {{#link-to "projects.new" class="ui button orange"}}+ Add models\Developer{{/link-to}}
+</div>
+{{outlet}}
+<table class="ui table">
+  <thead>
+  <tr>
+    <th scope="col">name</th>
+    <th> Start Date</th>
+    <th> Due Date </th>
+    <th></th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  {{#each model.datas as |proj| }}
+    <tr style="max-width: 200px;">
+      <td>
+        <div class="ui" style="font-size: 20px;">
+          {{ proj.name }}
+        </div>
+        <div class="ui" style="font-size: 12px; color: grey;">
+          {{ proj.Descriptif }}
+
+        </div>
+      </td>
+      <td> {{ proj.StartDate }} </td>
+      <td> {{ proj.DueDate }} </td>
+      <td style="width: 15px;"><button class="ui button black" {{ action 'edit' proj }}> EDIT </button></td>
+      <td style="width: 15px;"><button class="ui button red" {{ action 'delete' proj }}> DELETE </button></td>
+    </tr>
+  {{/each}}
+  </tbody>
+</table>

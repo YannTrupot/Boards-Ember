@@ -1,0 +1,28 @@
+<div class="ui container">
+  <br>
+    <div class="ui form">
+      <div class="field">
+        <label for="name"> Nom </label>
+        {{ input value = model.name id="name" class="ui input"}}
+      </div>
+      <div class="field">
+        <label for="Descriptif"> Descriptif </label>
+        {{ input value = model.Descriptif id="Descriptif" class="ui input"}}
+      </div>
+
+      <div class="field">
+        <label for="StartDate"> Start Date </label>
+        {{ input value = model.StartDate id="StartDate" class="ui input"}}
+      </div>
+      <div class="field">
+        <label for="DueDate"> Due Date </label>
+        {{ input value = model.DueDate id="DueDate" class="ui input"}}
+      </div>
+    </div>
+  <br><br>
+  <button class="ui button" {{ action 'addProject' model }}>Ajouter</button>
+
+
+</div>
+
+{{outlet}}

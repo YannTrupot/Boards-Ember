@@ -1,0 +1,12 @@
+<div class="ui container">
+  <br>
+  <div class="ui input">
+    {{ input value = model.Identity id="Identity" class="ui input"}}
+  </div>
+  <br><br>
+  <button class="ui button" {{ action 'addDeveloper' model }}>Ajouter</button>
+
+
+</div>
+
+{{outlet}}

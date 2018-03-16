@@ -1,0 +1,25 @@
+ <h2 class="ui header" style="margin-top: 10px; margin-bottom: 10px">
+    models\Developers
+  </h2>
+  <div class="ui" style="margin-top: 10px; margin-bottom: 10px">
+    {{#link-to "developers.new" class="ui button orange"}}+ Add models\Developer{{/link-to}}
+  </div>
+ {{outlet}}
+  <table class="ui table">
+    <thead>
+    <tr>
+      <th scope="col">Identity</th>
+      <th></th>
+      <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#each model.datas as |dev| }}
+      <tr>
+        <td style="color:grey">{{ dev.Identity }}</td>
+        <td style="width: 15px;"><button class="ui button black" {{ action 'edit' dev }}> EDIT </button></td>
+        <td style="width: 15px;"><button class="ui button red" {{ action 'delete' dev }}> DELETE </button></td>
+      </tr>
+    {{/each}}
+    </tbody>
+  </table>
